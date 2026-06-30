@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+  --font-jost: 'Jost', system-ui, sans-serif;
+
+  /* ── Surface (Stitch: L'Art de Fleur Identity) ── */
+  --color-surface: #fbf9f8;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae8e7;
+
+  /* ── Primary ── */
+  --color-primary: #635f40;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #b2ac88;
+  --color-on-primary-container: #444024;
+
+  /* ── Secondary ── */
+  --color-secondary: #7a5642;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fecdb4;
+
+  /* ── Tertiary ── */
+  --color-tertiary: #5e604d;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #acad96;
+
+  /* ── Error ── */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+
+  /* ── Text & outline ── */
+  --color-charcoal: #1b1c1c;          /* on-surface */
+  --color-charcoal-light: #49473d;    /* on-surface-variant */
+  --color-outline: #7a776c;
+  --color-outline-variant: #cbc6b9;
+
+  /* ── Aliases ── */
+  --color-sage: #b2ac88;              /* = primary-container */
+  --color-inverse-surface: #303030;
+}
+
+:root {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1b1c1c;
+  background: #fbf9f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fbf9f8;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    color: #1b1c1c;
+    margin: 0;
+  }
+  p { margin: 0; }
+}
+
+a { text-decoration: none; color: inherit; }
+
+.font-jost { font-family: 'Jost', system-ui, sans-serif; }
+
+@layer base {
+  button {
+    border: none;
+    background: none;
+    font-family: inherit;
+  }
+}
+
+input, textarea, select {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 16px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: #1b1c1c;
+  border: 2.5px solid #fbf9f8;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: #1b1c1c;
+  border: 2.5px solid #fbf9f8;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.22);
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
+input[type="range"]::-moz-range-track { background: transparent; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+
+::selection {
+  background: rgba(178, 172, 136, 0.3);
+}
+
+.label-caps {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.glass {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: rgba(251, 249, 248, 0.78);
+}
+
+.glass-dark {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: rgba(27, 28, 28, 0.75);
+}
+
+.shadow-ambient {
+  box-shadow: 0 0 40px rgba(27, 28, 28, 0.04);
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

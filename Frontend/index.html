@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <title>L'Art de Fleur — Цветочный Ателье</title>
+    <script>
+      // Restore path after GitHub Pages 404 redirect
+      (function() {
+        var p = window.location.search.slice(1).split('&').reduce(function(a, b) {
+          var kv = b.split('='); a[kv[0]] = kv[1]; return a;
+        }, {});
+        if (p.p) {
+          window.history.replaceState(null, null,
+            window.location.pathname.split('/').slice(0, 2).join('/') +
+            '/' + p.p.replace(/~and~/g, '&') +
+            (p.q ? '?' + p.q.replace(/~and~/g, '&') : '') +
+            window.location.hash
+          );
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
